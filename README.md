@@ -13,8 +13,6 @@ Welcome to the Cyber Playbook! This repository serves as a comprehensive guide f
 - [Incident Response Plans](#incident-response-plans)
 - [Security Controls](#security-controls)
 - [Employee Training and Awareness](#employee-training-and-awareness)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Threat Assessment
 
