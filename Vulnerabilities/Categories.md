@@ -1,0 +1,8 @@
+## Vulnerability Categorization
+
+| **Scheduled Maintenance** | **Policy Update** | **Other Security Issues** |
+|---------------------------|-------------------|---------------------------|
+| **List the vulnerabilities from the scan that can be reasonably addressed in one week** | **List the vulnerabilities from the scan that can be reasonably addressed in one month** | **List the vulnerabilities from the scan that can be reasonably addressed in two months** |
+| - NVT: TCP timestamps  <br> - NVT: Microsoft Windows SMB Server NTLM Multiple Vulnerabilities (971468)  <br> - NVT: Microsoft Windows SMB Server Multiple Vulnerabilities-Remote (4013389)  | - NVT: SMB Brute Force Logins With Default Credentials (admin:guest) <br> - NVT: SSL/TLS: Certificate Signed Using A Weak Signature Algorithm | - NVT: Microsoft SQL Server End Of Life Detection <br> - NVT: Cleartext Transmission of Sensitive Information via HTTP |
+| **Scheduled Maintenance Rationale** | **Policy Update Rationale** | **Other Security Issues Rationale** |
+| These vulnerabilities belong in this category because these can be fixed by weekly security patches and software updates. | The vulnerabilities listed in this category belong in this category because they are changes that an organization must make that are not immediate. Quickly rolling out updates could prove to do more harm than good, so these vulnerabilities need strategic planning before being updated. | The vulnerabilities in this category are listed here because they are vulnerabilities that cannot be patched immediately and may require more complex solutions to fix them. |
