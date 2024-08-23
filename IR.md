@@ -10,7 +10,7 @@
 
 - Relevance: Networking equipment used to intercept wireless communications and break into networks is another significant asset.
 
-- Potential Evidence: This equipment could provide insights into the networks that were accessed, and how adversaries used high-powered antennas to steal information. (Vijayan, 2009)
+- Potential Evidence: This equipment could provide insights into the networks that were accessed, and how adversaries used high-powered antennas to steal information.
 
 # Evidence Collection Tools
 
