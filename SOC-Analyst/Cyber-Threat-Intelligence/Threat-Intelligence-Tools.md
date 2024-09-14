@@ -54,9 +54,30 @@ https://threatfox.abuse.ch/
 
 ***PhishTool***
 https://www.phishtool.com/
-- 
+- *Core Features*
+  - Perform email analysis: PhishTool retrieves metadata from phishing emails and provides analysts with the relevant explanations and capabilities to follow the email’s actions, attachments, and URLs to triage the situation.
+  - Heuristic intelligence: OSINT is baked into the tool to provide analysts with the intelligence needed to stay ahead of persistent attacks and understand what TTPs were used to evade security controls and allow the adversary to social engineer a target.
+  - Classification and reporting: Phishing email classifications are conducted to allow analysts to take action quickly. Additionally, reports can be generated to provide a forensic record that can be shared.
+
+- *Additional Features*
+  - Manage user-reported phishing events.
+  - Report phishing email findings back to users and keep them engaged in the process.
+  - Email stack integration with Microsoft 365 and Google Workspace.
+
+- *Analysis Tab*
+  - Headers: Provides the routing information of the email, such as source and destination email addresses, Originating IP and DNS addresses and Timestamp.
+  - Received Lines: Details on the email traversal process across various SMTP servers for tracing purposes.
+  - X-headers: These are extension headers added by the recipient mailbox to provide additional information about the email.
+  - Security: Details on email security frameworks and policies such as Sender Policy Framework (SPF), DomainKeys Identified Mail (DKIM) and Domain-based Message Authentication, Reporting and Conformance (DMARC).
+  - Attachments: Lists any file attachments found in the email.
+  - Message URLs: Associated external URLs found in the email will be found here.
 
 ***Cisco Talos Intelligence***
 https://talosintelligence.com/
-- 
+- Threat Intelligence & Interdiction: Quick correlation and tracking of threats provide a means to turn simple IOCs into context-rich intel.
+- Detection Research: Vulnerability and malware analysis is performed to create rules and content for threat detection.
+- Engineering & Development: Provides the maintenance support for the inspection engines and keeps them up-to-date to identify and triage emerging threats.
+- Vulnerability Research & Discovery: Working with service and software vendors to develop repeatable means of identifying and reporting security vulnerabilities.
+- Communities: Maintains the image of the team and the open-source solutions.
+- Global Outreach: Disseminates intelligence to customers and the security community through publications.
 
