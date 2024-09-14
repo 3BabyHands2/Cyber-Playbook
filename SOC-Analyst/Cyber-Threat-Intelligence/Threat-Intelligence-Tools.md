@@ -39,15 +39,18 @@ https://feodotracker.abuse.ch/
  
 *SSL Blacklist*
 https://sslbl.abuse.ch/
-- 
+- Tool to identify and detect malicious SSL connections
+- Denylist is also used to identify JA3 fingerprints that would help detect and block malware botnet C2 communications on the TCP layer
 
 *URLhaus*
 https://urlhaus.abuse.ch/
--
+- Tool focuses on sharing malicious URLs used for malware distribution
+- Database for domains, URLs, hashes and filetypes
+- Provides feeds associated with country, AS number and Top Level Domain
 
 *ThreatFox*
 https://threatfox.abuse.ch/
-- 
+- Search for, share and export indicators of compromise associated with malware
 
 ***PhishTool***
 https://www.phishtool.com/
