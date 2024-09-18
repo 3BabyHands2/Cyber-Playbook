@@ -39,3 +39,22 @@
 - sudo snort -r logname.log tcp
 - sudo snort -r logname.log 'udp and port ?'
 - sudo snort -r logname.log 'tcp and port ?'
+
+***Snort in IDS/IPS Mode***
+- -c	
+Defining the configuration file.
+
+- T	Testing the configuration file.
+- N	Disable logging.
+- D	Background mode.
+- A	Alert modes;
+
+  - full: Full alert mode, providing all possible information about the alert. This one also is the default mode; once you use -A and don't specify any mode, snort uses this mode.
+fast:
+  - Fast mode shows the alert message, timestamp, source and destination IP, along with port numbers.
+
+  - console: Provides fast style alerts on the console screen.
+
+  - cmg: CMG style, basic header details with payload in hex and text format.
+
+  - none: Disabling alerting.
