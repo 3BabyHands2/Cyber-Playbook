@@ -58,3 +58,13 @@ fast:
   - cmg: CMG style, basic header details with payload in hex and text format.
 
   - none: Disabling alerting.
+ 
+***PCAP Investigation***
+- -r / --pcap-single= :	Read a single pcap
+- --pcap-list="" :	Read pcaps provided in command (space separated).
+- --pcap-show	: Show pcap name on console during processing.
+
+*Example: Investigate the mx-1.pcap file with the default configuration file*
+- sudo snort -c /etc/snort/snort.conf -A full -l . -r mx-1.pcap
+
+
