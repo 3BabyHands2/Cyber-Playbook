@@ -32,3 +32,10 @@
 - "-K ASCII": Log packets in ASCII format
 - "-r": Reading option, read the dumpbed logs in Snort
 - "-n": Specify the number of packets that will process/read
+
+*Filter Binary Log Files*
+- sudo snort -r logname.log -X
+- sudo snort -r logname.log icmp
+- sudo snort -r logname.log tcp
+- sudo snort -r logname.log 'udp and port ?'
+- sudo snort -r logname.log 'tcp and port ?'
