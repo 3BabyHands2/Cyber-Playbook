@@ -26,3 +26,9 @@
 
 *Sniffing with parameter "-X"*
 - sudo snort -X
+
+***Logger Mode***
+- "-l": Logger mode, target log and alert output directory. Default output folder is /var/log/snort | Default action is to dump as tcpdump format in /var/log/snort
+- "-K ASCII": Log packets in ASCII format
+- "-r": Reading option, read the dumpbed logs in Snort
+- "-n": Specify the number of packets that will process/read
