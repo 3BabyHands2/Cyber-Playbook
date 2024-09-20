@@ -64,7 +64,59 @@ fast:
 - --pcap-list="" :	Read pcaps provided in command (space separated).
 - --pcap-show	: Show pcap name on console during processing.
 
-*Example: Investigate the mx-1.pcap file with the default configuration file*
+# Examples
+
+*Investigate the mx-1.pcap file with the default configuration file*
 - sudo snort -c /etc/snort/snort.conf -A full -l . -r mx-1.pcap
+
+
+# Writing IDS Rules (FTP)
+*Write a single rule to detect "all TCP port 21" traffic in the given pcap*
+- Rule: 
+  - alert tcp any 21 <> any any (msg:"Outbound ftp traffic detected";sid:1000000000003; rev :1)
+  - alert tcp any any <> any 21 (msg:"Inbound ftp traffic detected";sid:1000000000004; rev :1)
+ 
+*What is the FTP service name?*
+- sudo strings snort.log.file_name | grep 220 | head
+- code 220 signifies a successful response that indicates the FTP server
+
+*Write a rule to detect failed FTP login attemps in the given pcap*
+- alert tcp any any <> any 21 (msg:"Failed ftp login attempt";content:"530";sid:1000000000005; rev :1)
+- “530” is the FTP code that denotes unsuccessful FTP login attempts.
+
+*Write a rule to detect successful FTP logins in the given pcap*
+- alert tcp any any <> any 21 (msg:"Successful ftp login";content:"230";sid:1000000000006; rev :1)
+
+*Write a rule to detect FTP login attempts with the "Administrator" username but no password entered yet*
+- alert tcp any any <> any 21 (msg:"Invalid Admin Password";content:"331";content:"Administrator";sid:1000000000008; rev :1)
+
+# Writing IDS Rules(PNG)
+
+*Write a rule to detect the PNG file in the given pcap*
+- alert tcp any any -> any any (msg:"PNG File Detected"; content:"|89 50 4E 47 0D 0A 1A 0A|"; depth:8;sid:10000000009)
+- sudo strings ftp-png-gif.pcap
+
+Write a rule to detct the GIF file in the given pcap*
+- alert tcp any any -> any any (msg:"GIF File Detected"; content:"GIF89a"; depth:6;sid:10000000010)
+- sudo strings snort.log.file_name
+
+# Writing IDS Rules (Torrent Metafile)
+
+*Write a rule to detect the torrent metafile in the given pcap*
+- alert tcp any any -> any any (msg:"Torrent File Detected"; content:".torrent"; nocase;sid:10000000011)
+
+*What is the name of the torrent application*
+- sudo strings snort.log.file_name
+
+# Troubleshooting Rule Syntax Erros
+
+*Find the syntax error in local-1.rules file and make it work smoothly*
+- 
+
+
+
+
+
+
 
 
