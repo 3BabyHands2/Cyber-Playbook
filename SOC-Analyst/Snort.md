@@ -110,9 +110,30 @@ Write a rule to detct the GIF file in the given pcap*
 
 # Troubleshooting Rule Syntax Erros
 
-*Find the syntax error in local-1.rules file and make it work smoothly*
-- 
-
+# Challenges
+***Scenario 1 | Brute-Force***
+- Step 1: Run Snort in sniffer mode
+  - sudo snort -v -l .
+- Step 2: Read log file
+  - sudo snort -r snort.log.file_name -X
+- Step 3: Use grep to track common port being used
+  - sudo snort -r snort.log.file_name -X | grep :22
+- Step 4: Write rule
+  - drop tcp any 22 <> any any (msg:"SSH Connection attempted"; sid:100001; rev:1;)
+- Step 5: Run rule to stop attack
+  - sudo snort -c /etc/snort/snort.conf -q -Q --daq afpacket -i eth0:eht1 -A full
+ 
+***Scenario 2 | Reverse Shell Attack***
+- Step 1: Run Snort in Sniffer Mode
+  - Use sudo snort -v -l .
+- Step 2: Inspect the Log File
+  - Use sudo snort -r snort.log.<log_number> -X / sudo snort -r snort.log.<log_number> -X | grep :4444 
+- Step 3: Analyze Packet Details: Limit the number of results by running
+  - sudo snort -r snort.log.<log_number> -X -n 10 
+- Step 4: Write a Snort Rule: Open the local.rules file using sudo gedit /etc/snort/rules/local.rules.
+  - drop tcp any 4444 <> any any (msg:"Reverse Shell Detected"; sid:100001; rev:1;).
+- Step 5: Run Snort in IPS Mode: Execute Snort in IPS mode using
+  - sudo snort -c /etc/snort/snort.conf -q -Q --daq afpacket -i eth0:eth1 -A full 
 
 
 
