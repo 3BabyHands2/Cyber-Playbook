@@ -10,3 +10,6 @@
 - "-C" : Ignoring checksum erros
 - "-v" : Version information
 - "zeekctl" : ZeekControl Module
+
+***Zeek-cut***
+- cat "file_name" | zeek-cut "auxillary"
